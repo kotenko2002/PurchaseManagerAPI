@@ -12,7 +12,7 @@ namespace PurchaseManagerAPI.Data
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> opt) : base(opt)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
