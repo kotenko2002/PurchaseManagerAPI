@@ -33,9 +33,6 @@ namespace PurchaseManagerAPI
 
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer
-            //    (Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlite
                 (Configuration.GetConnectionString("DefaultConnection")));
 
@@ -43,7 +40,7 @@ namespace PurchaseManagerAPI
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddHttpContextAccessor();//context
+            services.AddHttpContextAccessor();
 
             #region JWT
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
